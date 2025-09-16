@@ -1,5 +1,11 @@
 #  Using R in Phoenix
 
+I recommend cloning this repository to access the data and scripts, ensuring a smoother learning experience.
+
+```bash
+git clone https://github.com/victorcaquilpan/Tutorial-R-Phoenix.git
+```
+
 First, you need to check if you have connection to Phoenix. Open a terminal in your computer and run:
 
 ```bash
