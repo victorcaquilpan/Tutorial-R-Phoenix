@@ -15,7 +15,9 @@ Here, you would need to enter your password. If everything is okay, you can acce
 
 ## Data Management
 
-There are different locations in Phoenix where you can store your data. Currently, it's recommended to use hpcfs. Enter to your storage and create a folder **data** and others called **scripts** and **outputs**.
+There are different locations in Phoenix where you can store your data. Currently, it's recommended to use hpcfs. Enter to your storage and create a folder **data** and others called **scripts** and **outputs**. The next structure is propose:
+
+![phoenix-structure](./images/phoenix-structure.png)
 
 ```bash
 cd /hpcfs/users/a1785655 # Replace with your University ID
