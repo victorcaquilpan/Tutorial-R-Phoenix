@@ -9,7 +9,7 @@ git clone https://github.com/victorcaquilpan/Tutorial-R-Phoenix.git
 First, you need to check if you have connection to Phoenix. Open a terminal in your computer and run:
 
 ```bash
-ssh a1785655@phoenix-login1.adelaide.edu.au   # Replace by your Uni ID
+ssh a1785655@phoenix-login1.adelaide.edu.au   # Replace with your University ID
 ```
 Here, you would need to enter your password. If everything is okay, you can access to Phoenix. 
 
@@ -18,7 +18,7 @@ Here, you would need to enter your password. If everything is okay, you can acce
 There are different locations in Phoenix where you can store your data. Currently, it's recommended to use hpcfs. Enter to your storage and create a folder **data** and others called **scripts** and **outputs**.
 
 ```bash
-cd /hpcfs/users/a1785655 # Replace by your Uni ID
+cd /hpcfs/users/a1785655 # Replace with your University ID
 mkdir data
 mkdir scripts
 mkdir output
@@ -27,21 +27,21 @@ mkdir output
 Now that you created your folder data, you can open a new terminal and copy the files that you need to transfer using:
 
 ```bash
-scp -r /path-to-data-folder/data a1785655@phoenix-login1.adelaide.edu.au:/hpcfs/users/a1785655/  # Replace by your Uni ID
+scp -r /path-to-data-folder/data a1785655@phoenix-login1.adelaide.edu.au:/hpcfs/users/a1785655/  # Replace with your University ID
 ```
 
 Also you can transfer your scripts using the same nomenclature. You need to have your R script and your bash script to run the job in Phoenix.
 
 ```bash
-scp -r /path-to-script-folder/scripts a1785655@phoenix-login1.adelaide.edu.au:/hpcfs/users/a1785655/   # Replace by your Uni ID
-cd /hpcfs/users/a1785655/scripts # Replace by your Uni ID
+scp -r /path-to-script-folder/scripts a1785655@phoenix-login1.adelaide.edu.au:/hpcfs/users/a1785655/   # Replace with your University ID
+cd /hpcfs/users/a1785655/scripts # Replace with your University ID
 ```
 
 Before running your script, you need to create a folder for your libraries/packages in R. After that, in R you need to indicate the path of the libraries and from R you can install all the libraries that you need. Since Phoenix doesn't provide internet connection at the moment of running your scripts, you need to install all the libraries that you need ahead.
 
 ```bash
 # Create a personal library folder for R packages (if it doesn't exist yet)
-mkdir -p /hpcfs/users/a1785655/local/RLibs # Replace by your Uni ID
+mkdir -p /hpcfs/users/a1785655/local/RLibs # Replace with your University ID
 
 # Load the R module available on the HPC system
 module load R
@@ -50,7 +50,7 @@ module load R
 R
 
 # Inside R: Add your personal library path to the search paths for R packages
-.libPaths(c("/hpcfs/users/a1785655/local/RLibs", .libPaths()))    # Replace by your Uni ID
+.libPaths(c("/hpcfs/users/a1785655/local/RLibs", .libPaths()))    # Replace with your University ID
 
 # Inside R: Check which library paths are currently active
 .libPaths()
@@ -67,7 +67,7 @@ quit()
 
 # Add your personal R library path to your bash profile
 # so that it is automatically set up each time you log in
-echo "export R_LIBS_USER=/hpcfs/users/a1785655/local/RLibs" >> ~/.bashrc      # Replace by your Uni ID
+echo "export R_LIBS_USER=/hpcfs/users/a1785655/local/RLibs" >> ~/.bashrc      # Replace with your University ID
 ```
 
 ## Running your scripts
@@ -121,7 +121,7 @@ From this output you can see mostly the ID of your running experiment, your user
 You can get any file that you are generating inside Phoenix to your computer. For that you can use the next next script:
 
 ```bash
-scp -r a1785655@phoenix-login1.adelaide.edu.au:/hpcfs/users/a1785655/output /Users/victorcaquilpan/Desktop/aiml/projects/Tutorial-Phoenix/output-phoenix/ # Replace by your Uni ID
+scp -r a1785655@phoenix-login1.adelaide.edu.au:/hpcfs/users/a1785655/output /Users/victorcaquilpan/Desktop/aiml/projects/Tutorial-Phoenix/output-phoenix/ # Replace with your University ID
 ```
 
 ## Missing libraries 
