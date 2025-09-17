@@ -11,7 +11,7 @@ First, you need to check if you have connection to Phoenix. Open a terminal in y
 ```bash
 ssh a1785655@phoenix-login1.adelaide.edu.au   # Replace with your University ID
 ```
-Here, you would need to enter your password. If everything is okay, you can access to Phoenix. 
+Here, you would need to enter your password. If everything is okay, you can access to Phoenix. Note: You go to use this terminal for running bash scripts in Phoenix.
 
 ## Data Management
 
@@ -26,13 +26,13 @@ mkdir scripts
 mkdir output
 ```
 
-Now that you created your folder data, you can open a new terminal and copy the files that you need to transfer using:
+Now that you created your folder data, you can open a **new terminal** and copy the files that you need to transfer using:
 
 ```bash
 scp -r /path-to-data-folder/data a1785655@phoenix-login1.adelaide.edu.au:/hpcfs/users/a1785655/  # Replace with your University ID
 ```
 
-Also you can transfer your scripts using the same nomenclature. You need to have your R script and your bash script to run the job in Phoenix.
+Note: You need to open a new terminal because the data transfer process is much easier from your computer to Phoenix. Then, keep a terminal for trasnfering files and the other terminal for running scripts inside Phoenix. Also you can transfer your scripts using the same nomenclature. You need to have your R script and your bash script to run the job in Phoenix.
 
 ```bash
 scp -r /path-to-script-folder/scripts a1785655@phoenix-login1.adelaide.edu.au:/hpcfs/users/a1785655/   # Replace with your University ID
